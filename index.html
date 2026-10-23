@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>DPL Construções · Dashboard de Faturamento</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <aside>
+        <div class="logo">
+            <img src="dpl_logo.png" alt="DPL Construções">
+        </div>
+
+        <nav id="nav"></nav>
+
+        <h4>Filtros</h4>
+
+        <label>Ano</label>
+        <select id="f-ano"></select>
+
+        <label>Mês</label>
+        <select id="f-mes"></select>
+
+        <label>Estado</label>
+        <select id="f-est"></select>
+
+        <label>Regional</label>
+        <select id="f-reg"></select>
+
+        <label>Setor</label>
+        <select id="f-set"></select>
+
+        <button class="btn" id="clr">Limpar filtros</button>
+
+        <h4>Dados</h4>
+
+        <button class="btn" id="csv">Exportar CSV</button>
+
+        <label class="btn" style="margin-top:8px">
+            Carregar Excel
+            <input type="file" id="up" accept=".xlsx,.xls" hidden>
+        </label>
+    </aside>
+
+    <main>
+        <header>
+            <h1 id="ttl"></h1>
+            <span id="sub"></span>
+        </header>
+
+        <div class="cards" id="cards"></div>
+
+        <div id="pg"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
